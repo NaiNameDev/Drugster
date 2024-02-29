@@ -1,5 +1,9 @@
+res://Scene/Tests/test_player_snarad.tscn
+res://Script/Game/Comps/PlayerRangeFireComp.gd
+res://Scene/Game/Comps/player_range_fire_comp.tscn
+res://Scene/Tests/test_player_snarad.gd
 res://Scene/UI/menu.tscn
-res://Script/Game/player.tscn
 res://Scene/Game/player.tscn
-res://Script/Game/player.gd
 res://Scene/Tests/test_scene.tscn
+res://Scene/Game/Comps/range_fire_comp.tscn
+res://Script/Game/player.gd

@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2spvooqlokxi"]
+
+[ext_resource type="PackedScene" uid="uid://ceg7o3swxhyju" path="res://Scene/Game/Comps/range_fire_comp.tscn" id="1_ik18v"]
+[ext_resource type="Script" path="res://Script/Game/Comps/PlayerRangeFireComp.gd" id="2_3cxgq"]
+[ext_resource type="PackedScene" uid="uid://big7r8pjlwavo" path="res://Scene/Tests/test_player_snarad.tscn" id="3_pkle2"]
+
+[node name="PlayerRangeFireComp" instance=ExtResource("1_ik18v")]
+script = ExtResource("2_3cxgq")
+Snarad = ExtResource("3_pkle2")

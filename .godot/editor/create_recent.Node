@@ -1,6 +1,8 @@
-Sprite2D
-Camera2D
 CollisionShape2D
+Area2D
+Sprite2D
+RigidBody2D
+Camera2D
 StaticBody2D
 CharacterBody2D
 Button

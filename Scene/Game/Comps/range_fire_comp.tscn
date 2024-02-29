@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceg7o3swxhyju"]
+
+[ext_resource type="Script" path="res://Script/Game/Comps/RangeFireComp.gd" id="1_dxdlu"]
+
+[node name="RangeFireComp" type="Node2D"]
+script = ExtResource("1_dxdlu")
