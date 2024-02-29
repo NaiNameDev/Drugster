@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cv2e5r2scoty4"]
+
+[node name="ToBo" type="CharacterBody2D"]
