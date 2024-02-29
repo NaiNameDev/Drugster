@@ -13,8 +13,8 @@ script = ExtResource("1_u5pct")
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 0
-offset_left = 681.0
-offset_top = 779.0
-offset_right = 1313.0
-offset_bottom = 999.0
+offset_left = 635.0
+offset_top = 785.0
+offset_right = 1267.0
+offset_bottom = 1005.0
 text = "LetUsBegun"

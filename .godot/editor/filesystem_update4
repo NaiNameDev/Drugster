@@ -1,1 +1,5 @@
 res://Scene/UI/menu.tscn
+res://Script/Game/player.tscn
+res://Scene/Game/player.tscn
+res://Script/Game/player.gd
+res://Scene/Tests/test_scene.tscn
