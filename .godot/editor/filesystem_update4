@@ -1,8 +1,6 @@
+res://Scene/Game/to_bo.tscn
+res://Script/Game/Boss/to_bo.gd
 res://Scene/UI/menu.tscn
 res://Scene/Game/player.tscn
-res://Scene/Tests/test_scene.tscn
-res://Scene/Game/Comps/range_fire_comp.tscn
-res://Scene/Game/Comps/player_range_fire_comp.tscn
-res://Scene/Tests/test_player_snarad.tscn
 res://Scene/Game/tutorial.tscn
-res://Scene/Game/to_bo.tscn
+res://Scene/Game/enemy_snarad_rocket.tscn

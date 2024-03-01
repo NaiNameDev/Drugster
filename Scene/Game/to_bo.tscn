@@ -1,3 +1,52 @@
-[gd_scene format=3 uid="uid://cv2e5r2scoty4"]
+[gd_scene load_steps=9 format=3 uid="uid://cv2e5r2scoty4"]
 
-[node name="ToBo" type="CharacterBody2D"]
+[ext_resource type="Texture2D" uid="uid://2cqgki8nw27v" path="res://Sprite/Totorial/TmpTuBo.png" id="1_4qdvg"]
+[ext_resource type="Script" path="res://Script/Game/Boss/to_bo.gd" id="1_grtxe"]
+[ext_resource type="PackedScene" uid="uid://c0pgjacxbgvi1" path="res://Scene/Game/Comps/enemy_range_fire_comp.tscn" id="3_bcstt"]
+[ext_resource type="PackedScene" uid="uid://bkb330a8y3gkw" path="res://Scene/Game/Comps/enemy_hit_box_comp.tscn" id="4_am64w"]
+[ext_resource type="PackedScene" uid="uid://ph0cifmwv5bx" path="res://Scene/Game/enemy_snarad.tscn" id="4_lhqlw"]
+[ext_resource type="PackedScene" uid="uid://w8jkul6y3b7r" path="res://Scene/Game/enemy_snarad_rocket.tscn" id="5_ukwnl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_th5a5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41w5u"]
+size = Vector2(32, 32)
+
+[node name="ToBo" type="CharacterBody2D" node_paths=PackedStringArray("RangeComp", "RangeComp2")]
+collision_layer = 16386
+collision_mask = 16386
+motion_mode = 1
+script = ExtResource("1_grtxe")
+RangeComp = NodePath("EnemyRangeFireComp")
+RangeComp2 = NodePath("EnemyRangeFireComp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_th5a5")
+
+[node name="TmpTuboSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_4qdvg")
+
+[node name="EnemyRangeFireComp" parent="." instance=ExtResource("3_bcstt")]
+position = Vector2(20, 19)
+Speed = 400
+Snarad = ExtResource("4_lhqlw")
+
+[node name="EnemyRangeFireComp2" parent="." instance=ExtResource("3_bcstt")]
+position = Vector2(-19, 18)
+RandomizeAngel = 100
+Speed = 200
+Snarad = ExtResource("5_ukwnl")
+
+[node name="EnemyHitBoxComp" parent="." instance=ExtResource("4_am64w")]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBoxComp"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_41w5u")
+
+[node name="ChangeAttack" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="ChangeAttack" to="." method="ChangeAttack"]

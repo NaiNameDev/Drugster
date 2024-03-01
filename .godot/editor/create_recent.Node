@@ -1,8 +1,11 @@
-CharacterBody2D
-TileMap
 CollisionShape2D
 Area2D
+NavigationRegion2D
+Node2D
+Timer
 Sprite2D
+CharacterBody2D
+TileMap
 RigidBody2D
 Camera2D
 StaticBody2D

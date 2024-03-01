@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0pgjacxbgvi1"]
+
+[ext_resource type="PackedScene" uid="uid://ceg7o3swxhyju" path="res://Scene/Game/Comps/range_fire_comp.tscn" id="1_gyxlh"]
+[ext_resource type="Script" path="res://Script/Game/Comps/EnemyRangeFireComp.gd" id="2_hx5cy"]
+
+[node name="EnemyRangeFireComp" instance=ExtResource("1_gyxlh")]
+script = ExtResource("2_hx5cy")
+RandomizeAngel = 50

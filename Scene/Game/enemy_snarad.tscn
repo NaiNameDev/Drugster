@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ph0cifmwv5bx"]
+
+[ext_resource type="PackedScene" uid="uid://big7r8pjlwavo" path="res://Scene/Tests/test_player_snarad.tscn" id="1_yvad8"]
+[ext_resource type="Texture2D" uid="uid://b5ew0cbjyv5pn" path="res://Sprite/Totorial/EnemyBullet.png" id="2_njgc3"]
+
+[node name="EnemySnarad" instance=ExtResource("1_yvad8")]
+
+[node name="Area2D" parent="." index="0"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="TmpSprite" parent="." index="2"]
+texture = ExtResource("2_njgc3")

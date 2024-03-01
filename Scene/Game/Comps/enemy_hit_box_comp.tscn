@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkb330a8y3gkw"]
+
+[ext_resource type="PackedScene" uid="uid://c2jyxwq3dpc7e" path="res://Scene/Game/Comps/hit_box_comp.tscn" id="1_056r6"]
+[ext_resource type="Script" path="res://Script/Game/Comps/enemy_hit_box_comp.gd" id="2_km0aw"]
+
+[node name="EnemyHitBoxComp" instance=ExtResource("1_056r6")]
+script = ExtResource("2_km0aw")

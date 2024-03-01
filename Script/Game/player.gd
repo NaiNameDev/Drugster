@@ -8,7 +8,7 @@ var State = Fight
 var Speed:int = 170
 var JumpForce:int = -200
 var FlyForce:int = -20
-@export var FlyTime:float = 10
+@export var FlyTime:float = 20
 var DefFlyTime:float
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -17,7 +17,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var FireCooldown = 0.5
 var CanFire = true
 
+@export var Health:float = 20
+@export var MaxHealth:float
+
 func _ready():
+	MaxHealth = Health
 	DefFlyTime = FlyTime
 
 func _physics_process(delta):
@@ -34,6 +38,9 @@ func _physics_process(delta):
 	elif is_on_floor():
 		FlyTime = DefFlyTime
 
+	if Health <= 0:
+		Death()
+
 	MouseToCamera()
 	move_and_slide()
 
@@ -43,6 +50,9 @@ func Attack():
 		CanFire = false
 		await get_tree().create_timer(FireCooldown).timeout
 		CanFire = true 
+
+func Death():
+	get_tree().reload_current_scene()
 
 func Move(Mode:int):
 	if Input.is_action_pressed("ui_accept") and is_on_floor() and Mode == 1:
@@ -81,3 +91,6 @@ func Fly():
 
 func MouseToCamera():
 	Camera.position = ((position - get_global_mouse_position())/2) * -1
+
+func Damaged(Damage:float):
+	Health -= Damage

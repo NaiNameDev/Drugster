@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://w8jkul6y3b7r"]
+
+[ext_resource type="PackedScene" uid="uid://ph0cifmwv5bx" path="res://Scene/Game/enemy_snarad.tscn" id="1_tjyvi"]
+[ext_resource type="Texture2D" uid="uid://6eyapif3ju1p" path="res://Sprite/Totorial/TuBoRocket.png" id="2_0hpqd"]
+[ext_resource type="Script" path="res://Script/Game/enemy_snarad_rocket.gd" id="2_16r71"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hmg8"]
+size = Vector2(11, 4)
+
+[node name="EnemySnaradRocket" instance=ExtResource("1_tjyvi")]
+script = ExtResource("2_16r71")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_7hmg8")
+
+[node name="TmpSprite" parent="." index="2"]
+rotation = -1.5708
+texture = ExtResource("2_0hpqd")

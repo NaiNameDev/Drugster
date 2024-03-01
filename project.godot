@@ -39,6 +39,13 @@ Fire={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="GeneralCollision"
+2d_physics/layer_2="PlayerAttacks"
+2d_physics/layer_3="EnemyAttacks"
+2d_physics/layer_15="BossTrigger"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
